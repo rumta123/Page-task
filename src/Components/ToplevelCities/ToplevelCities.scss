@@ -1,0 +1,173 @@
+.toplevel-cities {
+  position: relative;
+
+  &__button {
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+
+    background-color: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    margin-right: 7px;
+  }
+
+  &__city {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__content {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: calc(100% + 2px);
+
+    width: 640px;
+
+    padding: 32px 24px;
+
+    box-shadow: 0 6px 9px rgba(34, 60, 80, 0.2);
+
+    background: white;
+
+    z-index: 10;
+  }
+
+  &__current-city {
+    display: block;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    color: #23252a;
+
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    margin-bottom: 10px;
+    margin-right: 16px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__find-button {
+    height: 56px;
+
+    padding: 11px 13px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #0099dc;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    :focus {
+      outline: none;
+    }
+  }
+
+  &__helper {
+    font-size: 14px;
+    line-height: 18px;
+    color: #9da2ae;
+  }
+
+  &__helper-search {
+    text-decoration: underline;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #0099dc;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 204px;
+  }
+
+  &__item {
+    padding-bottom: 16px;
+
+    cursor: pointer;
+
+    & > span {
+      &:hover {
+        color: #0099dc;
+      }
+    }
+  }
+
+  &__item-name {
+    display: block;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #3a3e46;
+
+    &--active {
+      color: #0099dc;
+    }
+  }
+}
+
+.show-content-enter-active {
+  animation: show 0.3s ease-in;
+}
+
+.show-content-leave-to {
+  animation: hide 0.3s ease-out;
+}
+
+.show-find-button-enter-active {
+  animation: show 0.7s linear;
+}
+
+.show-find-button-leave-to {
+  animation: hide 0.2s linear;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

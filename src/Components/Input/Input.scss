@@ -1,0 +1,46 @@
+.input {
+  display: flex;
+  align-items: center;
+
+  width: 380px;
+  height: 56px;
+
+  padding: 12px 16px;
+
+  background: white;
+
+  border: 1px solid #c7cad1;
+  border-radius: 4px;
+
+  &__field {
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 22px;
+
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    transform: translateX(50%);
+
+    :hover {
+      & > svg {
+        fill: #666;
+      }
+    }
+
+    :focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.toplevel {
+  background: linear-gradient(90deg, #0099dc 0%, #9f1c6e 62.5%, #ff0803 100%);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    width: 1200px;
+    height: 32px;
+
+    margin: auto;
+  }
+}

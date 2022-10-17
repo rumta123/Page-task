@@ -1,0 +1,175 @@
+@mixin with-circle {
+  &::before {
+    position: absolute;
+
+    content: '';
+
+    left: 0;
+    top: 50%;
+
+    transform: translate(-130%, -50%);
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    @content;
+  }
+}
+
+.content {
+  &__wrapper {
+    display: block;
+
+    width: 1200px;
+
+    margin: auto;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 44px;
+    font-weight: 600;
+    color: #333;
+
+    text-align: center;
+
+    padding-top: 20px;
+    margin: 0;
+    margin-bottom: 40px !important;
+  }
+
+  &__red {
+    color: #ff000a;
+  }
+
+  &__subtitle {
+    height: 66px;
+
+    font-size: 40px;
+    font-weight: 600;
+
+    text-align: center;
+
+    margin: 0;
+  }
+
+  &__graphics {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    display: block;
+
+    font-size: 17px;
+
+    margin-bottom: 24px;
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-text {
+    padding-left: 20px;
+  }
+
+  &__text {
+    display: block;
+
+    position: relative;
+
+    font-size: 13px;
+    line-height: 160%;
+
+    &--green {
+      @include with-circle {
+        background-color: #81ae56;
+      }
+    }
+
+    &--yellow {
+      @include with-circle {
+        background-color: #ffd963;
+      }
+    }
+
+    &--red {
+      @include with-circle {
+        background-color: #cf2f36;
+      }
+    }
+
+    &--blue {
+      @include with-circle {
+        background-color: #77b6e7;
+      }
+    }
+
+    &--violet {
+      @include with-circle {
+        background-color: #a955b8;
+      }
+    }
+
+    &--grey {
+      @include with-circle {
+        background-color: #f3f1ed;
+      }
+    }
+
+    &--titled {
+      font-size: 16px;
+      font-weight: 600;
+
+      color: #333;
+    }
+
+    &--spaced {
+      padding-left: 34px;
+    }
+  }
+
+  &__item-row {
+    margin-bottom: 8px;
+  }
+
+  &__item-head {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    margin-right: 10px;
+  }
+}
+
+.fetch-info {
+  font-size: 40px;
+  font-weight: 500;
+
+  text-align: center;
+
+  margin: 0;
+  padding-top: 30px;
+}
+
+canvas {
+  width: 200px !important;
+  height: 200px !important;
+}

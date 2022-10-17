@@ -1,0 +1,42 @@
+.header-menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+
+  padding: 5px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1200px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-right: 7px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 20px;
+    color: #454a54;
+    text-decoration: none;
+
+    &:hover {
+      color: #3a3e46;
+    }
+
+    &--hot {
+      color: #f00 !important;
+    }
+  }
+}
